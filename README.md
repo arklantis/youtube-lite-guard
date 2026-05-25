@@ -60,6 +60,12 @@ YouTube Lite Guard does not collect, store, or transmit browsing data.
 
 The extension only uses Chrome storage to save your local toggle settings.
 
+## Project Note
+
+This project was vibe-coded with help from OpenAI Codex after diagnosing a real-world YouTube resource usage problem during gaming and multitasking.
+
+The code is intentionally small and readable so users can inspect what the extension does before installing it. It should be treated as a practical utility, not an official YouTube fix.
+
 ## Development
 
 The extension is intentionally simple:
@@ -73,4 +79,8 @@ After editing files, open `chrome://extensions` and click reload on the extensio
 
 ## License
 
-MIT
+This project uses the MIT License.
+
+In plain English, that means you can use, copy, modify, publish, distribute, or fork this project, including for your own version, as long as the license notice stays included.
+
+The software is provided as-is, without warranty.
