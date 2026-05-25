@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>YouTube Lite Guard</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>YouTube Lite Guard</h1>
+        <select id="language" aria-label="Language">
+          <option value="en">English</option>
+          <option value="zh-Hant">繁體中文</option>
+        </select>
+      </header>
+      <section class="stats">
+        <div class="stats-title">
+          <h2 data-i18n="statsTitle">Current YouTube Page</h2>
+          <button id="refreshStats" type="button" data-i18n="refreshStats">Refresh</button>
+        </div>
+        <dl>
+          <div>
+            <dt data-i18n="jsHeap">JS heap estimate</dt>
+            <dd id="memoryUsed">-</dd>
+          </div>
+          <div>
+            <dt data-i18n="domNodes">DOM nodes</dt>
+            <dd id="nodeCount">-</dd>
+          </div>
+          <div>
+            <dt data-i18n="pageStatus">Page status</dt>
+            <dd id="pageStatus">-</dd>
+          </div>
+        </dl>
+        <p id="statsNote" data-i18n="statsNote">This is page JS heap, not total Chrome task-manager memory.</p>
+      </section>
+      <section>
+        <label class="primary"><input type="checkbox" id="enabled"> <span data-i18n="enabled">Enable lite mode</span></label>
+        <label><input type="checkbox" id="aggressiveCleanup"> <span data-i18n="aggressiveCleanup">Aggressive cleanup</span></label>
+      </section>
+      <section>
+        <h2 data-i18n="watchPage">Watch Page</h2>
+        <label><input type="checkbox" id="hideChat"> <span data-i18n="hideChat">Hide live chat</span></label>
+        <label><input type="checkbox" id="hideComments"> <span data-i18n="hideComments">Hide comments</span></label>
+        <label><input type="checkbox" id="hideRecommendations"> <span data-i18n="hideRecommendations">Hide side recommendations</span></label>
+        <label><input type="checkbox" id="hidePlaylists"> <span data-i18n="hidePlaylists">Hide playlist panel</span></label>
+        <label><input type="checkbox" id="hideEndscreen"> <span data-i18n="hideEndscreen">Hide end screen cards</span></label>
+        <label><input type="checkbox" id="compactWatch"> <span data-i18n="compactWatch">Compact watch layout</span></label>
+      </section>
+      <section>
+        <h2 data-i18n="siteWide">Site Wide</h2>
+        <label><input type="checkbox" id="hideShorts"> <span data-i18n="hideShorts">Hide Shorts sections</span></label>
+        <label><input type="checkbox" id="hideHomeFeed"> <span data-i18n="hideHomeFeed">Hide home feed</span></label>
+        <label><input type="checkbox" id="hideMiniplayer"> <span data-i18n="hideMiniplayer">Hide mini player</span></label>
+        <label><input type="checkbox" id="hideNotifications"> <span data-i18n="hideNotifications">Hide notification button</span></label>
+        <label><input type="checkbox" id="hideMerch"> <span data-i18n="hideMerch">Hide merch and shopping</span></label>
+      </section>
+      <p data-i18n="reloadNote">Refresh YouTube tabs after changing options for the clearest memory reduction.</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
